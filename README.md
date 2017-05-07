@@ -1,5 +1,21 @@
-## isAsync
-Checks whether a value is an async function
+<p align="center">
+    <a href="#install" alt="isAsync">
+        <img src=".github/header.png" alt="Header of isAsync"/>
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/nof1000/isclass">isclass</a>
+    <strong>&emsp;&bull;&emsp;</strong>
+    <a href="https://github.com/nof1000/isarrow">isarrow</a>
+    <strong>&emsp;&bull;&emsp;</strong>
+    <strong>isasync</strong>
+</p>
+
+
+## What it's for?
+This is Node.js library that checks whether a value is an async function
+
 
 ## Install
 npm:
@@ -11,6 +27,7 @@ yarn:
 ```
 $ yarn add isasync
 ```
+
 
 ## Example
 ```js
@@ -26,6 +43,7 @@ console.log(isAsync(123)); // > false
 console.log(isAsync({})); // > false
 console.log(isAsync([])); // > false
 ```
+
 
 ## LICENSE
 [MIT](./LICENSE "The MIT License")
