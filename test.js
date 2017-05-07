@@ -1,56 +1,58 @@
 const isAsync = require('./index.js');
 const assert = require('assert');
 
-describe('String', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync('Hello world'), false);
+describe('isAsync', () => {
+    describe('String', () => {
+        it('false', () => {
+            assert.equal(isAsync('Hello world'), false);
+        });
     });
-});
 
-describe('Function', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync(function() {}), false);
+    describe('Function', () => {
+        it('false', () => {
+            assert.equal(isAsync(function() {}), false);
+        });
     });
-});
 
-describe('Async Function', () => {
-    it('Should be a true', () => {
-        assert.equal(isAsync(async function() {}), true);
+    describe('Async Function', () => {
+        it('true', () => {
+            assert.equal(isAsync(async function() {}), true);
+        });
     });
-});
 
-describe('Class', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync(class {}), false);
+    describe('Class', () => {
+        it('false', () => {
+            assert.equal(isAsync(class {}), false);
+        });
     });
-});
 
-describe('Arrow Function', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync(() => {}), false);
+    describe('Arrow Function', () => {
+        it('false', () => {
+            assert.equal(isAsync(() => {}), false);
+        });
     });
-});
 
-describe('Async Arrow Function', () => {
-    it('Should be a true', () => {
-        assert.equal(isAsync(async () => {}), true);
+    describe('Async Arrow Function', () => {
+        it('true', () => {
+            assert.equal(isAsync(async () => {}), true);
+        });
     });
-});
 
-describe('Number', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync(123), false);
+    describe('Number', () => {
+        it('false', () => {
+            assert.equal(isAsync(123), false);
+        });
     });
-});
 
-describe('Object', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync({}), false);
+    describe('Object', () => {
+        it('false', () => {
+            assert.equal(isAsync({}), false);
+        });
     });
-});
 
-describe('Array', () => {
-    it('Should be a false', () => {
-        assert.equal(isAsync([]), false);
+    describe('Array', () => {
+        it('false', () => {
+            assert.equal(isAsync([]), false);
+        });
     });
 });
